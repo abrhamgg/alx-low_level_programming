@@ -3,7 +3,7 @@
 /**
  * main - starting point
  *
- * return: 0 if the code runs without error
+ * Return: 0 if the code runs without error
  */
 
 int main(void)

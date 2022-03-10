@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * function main returns 0 if the code runs without any error
+ * main - starting point
+ *
+ * Return: Always 0 if the code is succesfull
  */
 int main(void)
 {

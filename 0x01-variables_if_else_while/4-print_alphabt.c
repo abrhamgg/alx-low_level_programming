@@ -9,12 +9,11 @@
 int main()
 {
 	char c;
-	for (c = 'a'; c < 'e'; c++)
-		putchar(c);
-	for (c = 'f'; c < 'q'; c++)
-		putchar(c);
-	for (c = 'r'; c <= 'z'; c++)
-		putchar(c);
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if ( c != 'q' && c != 'e')
+			putchar(c);
+	}
 	putchar('\n');
 
 	return (0);

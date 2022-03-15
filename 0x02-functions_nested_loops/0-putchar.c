@@ -8,6 +8,7 @@
 
 int main(void)
 {
+    
     char ch[] = "_putchar";
     int i;
 
@@ -16,4 +17,5 @@ int main(void)
         _putchar(ch[i]);
     }
     _putchar('\n');
+
 }

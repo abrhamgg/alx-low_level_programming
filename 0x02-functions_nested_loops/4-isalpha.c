@@ -1,8 +1,12 @@
 #include "main.h"
 
 /**
- * _isalpha - check if the input and returns 1 if its an alphabet , 0 otherwise.
+ * _isalpha - check if the input and 
+ * returns 1 if its an alphabet , 0 otherwise.
  *
+ * @c: The character in ASCII code
+ *
+ *Return: 1 for letters. Returns 0 otherwise
  */
 
 int _isalpha(int c)

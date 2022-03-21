@@ -46,6 +46,6 @@ int main(void)
 			randomizer = rand() % 4;
 			printf("%c", password[i]);
 		}
-		return 0
 	}
+	return 0;
 }

@@ -11,14 +11,24 @@
 
 void rev_string(char *s)
 {
-        int len;
+    int i;
+    int tmp;
+    int len = 0;
+    int x, n;
 
-        for (len = 0; s[len] != '\0'; len++)
-        {
-        }
-        for (len = len - 1; len >= 0; len--)
-        {
-                _putchar(s[len]);
-        }
-        _putchar('\n');
+    for (i = 0; *(s + i) != '\0'; i++)
+    {
+        len++;
+    }
+    len = len -1;
+    //printf("%d\n", len);
+    for (i = 0; i < len/2; i++)
+    {
+        x = len - 1;
+       // printf("%d", x);
+        tmp = s[i];
+        s[i] = s[x];
+        s[x] = tmp;
+    }
+
 }

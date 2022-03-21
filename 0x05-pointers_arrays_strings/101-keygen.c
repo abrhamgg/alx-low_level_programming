@@ -5,7 +5,6 @@
 
 
 
-// Driver Code
 int main()
 {
 	int N = rand() % 8;
@@ -15,17 +14,17 @@ int main()
 
 	srand((unsigned int)(time(NULL)));
 
-	char numbers[] = "0123456789";
+	char *numbers[] = "0123456789";
 
 	
-	char letter[] = "abcdefghijklmnoqprstuvwyzx";
+	char *letter[] = "abcdefghijklmnoqprstuvwyzx";
 
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	char *LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 
 	
-	char symbols[] = "!@#$^&*?";
+	char *symbols[] = "!@#$^&*?";
 
-	char password[N];
+	char *password[N];
 
 	randomizer = rand() % 4;
 

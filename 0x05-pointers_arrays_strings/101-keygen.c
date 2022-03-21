@@ -3,49 +3,34 @@
 #include <time.h>
 
 /**
- * main - program that generates random passwords
- * for program crackme.
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i;
-	int N = rand() % 25;
-	char *Letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *Number = "123456789";
-	char *symbol = "!@#$^&*?";
-	char *letter = "abcdefghijklmnopqrstuvwxyz";
-	int randomizer = rand() % 4;
-	char password[50];
+	int i, sum, n;
+	int pass[100];
 
-	for (i = 0; i < N; i++)
+	sum = 0;
+
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		if (randomizer == 1) 
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
 		{
-			password[i] = Number[rand() % 10];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 2) 
-		{
-			password[i] = symbol[rand() % 8];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);	
-		}
-		else if (randomizer == 3) 
-		{
-			password[i] = Letter[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else 
-		{
-			password[i] = letter[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
 		}
 	}
-	return 0;
+
+	return (0);
 }

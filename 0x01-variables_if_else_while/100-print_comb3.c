@@ -14,8 +14,15 @@ int main(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			printf("%d%d, ", i, j);
+			if (i == 9 && j == 9)
+			{
+				printf("%d%d", i, j);
+			}
+			else
+				printf("%d%d, ",i, j);
 		}
 	}
+	printf("\n");
+
 	return (0);
 }

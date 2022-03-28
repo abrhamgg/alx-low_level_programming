@@ -9,7 +9,7 @@
  * Return: dest.
  */
 
-char *_mempcy(char *dest, char *src, int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	int i = 0;
 

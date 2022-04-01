@@ -1,22 +1,12 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * main - function that prints the name
- * of the program.
- * @argc: number of command line input.
- * @argv: array of inputs.
- *
- * Return: 0 success.
- */
-
+ * main -  writes its name
+ * @argc: arguement count
+ * @argv: array of pointers to arguement strings
+ * Return: 0
+ **/
 int main(int argc, char *argv[])
 {
-	int i = 0;
-
-	while (argv[0][i] != '\0')
-	{
-		_putchar (argv[0][i]);
-		i++;
-	}
+	printf("%s\n", *argv);
 	return (0);
 }

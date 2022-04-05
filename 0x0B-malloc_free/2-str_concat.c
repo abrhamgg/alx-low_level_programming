@@ -1,38 +1,38 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * str_concat - function that concatenates
- * two strings.
- * @s1: input value.
- * @s2: input value.
- * Return: pointer to newly allocated space.
- */
-
+ * *str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to new space in memory or null
+ **/
 char *str_concat(char *s1, char *s2)
 {
-	int i;
-	int j;
-	int k;
-	char *add;
-
+	char *strDup;
+	int i, j;
 	if (s1 == NULL)
-	{
-		i = 0;
-	}
+		s1 = "";
 	if (s2 == NULL)
-		j = 0;
-	i = strlen(s1);
-	j = strlen(s2);
-	add = malloc((i + j + 1) * sizeof(char));
-	for (k = 0; k < (i + j); k++)
+		s2 = "";
+	i = j = 0;
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
+		j++;
+	strDup = malloc(sizeof(char) * (i + j + 1));
+	if (strDup == NULL)
+		return (NULL);
+	i = j = 0;
+	while (s1[i] != '\0')
 	{
-		if (k < i)
-			add[k] = s1[k];
-		else
-			add[k] = s2[k - i];
+		strDup[i] = s1[i];
+		i++;
 	}
-	return (add);
+	while (s2[j] != '\0')
+	{
+		strDup[i] = s2[j];
+		i++, j++;
+	}
+	strDup[i] = '\0';
+	return (strDup);
 }

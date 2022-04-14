@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "vardiac_functions.h"
+#include "variadic_functions.h"
 #include <stdarg.h>
 
 /**
@@ -11,7 +11,7 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	int i, j, k;
+	unsigned int i;
 	va_list ptr;
 	char *string;
 

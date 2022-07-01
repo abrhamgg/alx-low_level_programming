@@ -2,6 +2,7 @@
 /**
  * hash_table_set - function that add new element to hash table
  * @key: is the key
+ * @ht: hash table
  * @value: value associated with key value.
  * Return: 1 if success && 0 if it failed
  */

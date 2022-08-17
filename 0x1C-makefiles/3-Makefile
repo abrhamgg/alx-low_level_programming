@@ -10,6 +10,6 @@ clean:
 	${RM} *.~ ${NAME}
 oclean:
 	${RM} ${OBJ}
-fclean: clean oclean
+fclean: oclean
 
 re: fclean all

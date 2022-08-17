@@ -13,6 +13,10 @@ def count(num, li):
 
 def island_perimeter(grid):
     """calculate perimeter in a list"""
+    if grid is None:
+        return
+    if len(grid) <= 1:
+        return
     max_num = 0
     for i in grid:
         max = (count(1, i))

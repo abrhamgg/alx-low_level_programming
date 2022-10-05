@@ -18,11 +18,23 @@ int interpolation_search(int *array, size_t size, int value)
 		return (-1);
 	pos = low + (((double)(high - low) / (array[high] - array[low])) *
 			(value - array[low]));
-	for (i = pos; i <= high; i++)
+	for (; (array[high] != array[low] && value >= array[low]
+				&& value <= array[high]); i++)
 	{
-		printf("Value checked array[%li] = [%i]\n", i, array[i]);
-		if (array[i] == value)
-			return (i);
+		pos = low + (((double)(high - low) / (array[high] - array[low])) *
+				(value - array[low]));
+		printf("Value checked array[%li] = [%i]\n", pos, array[pos]);
+		if (array[pos] < value)
+			low = pos + 1;
+		else if (array[pos] > value)
+			high = pos - 1;
+		else
+			return (pos);
+	}
+	if (value == array[low])
+	{
+		printf("Value checked array[%li] = [%i]\n", low, array[low]);
+		return (low);
 	}
 	printf("Value checked array[%li] is out of storage\n", pos);
 	return (-1);

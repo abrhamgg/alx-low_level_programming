@@ -36,6 +36,6 @@ int interpolation_search(int *array, size_t size, int value)
 		printf("Value checked array[%li] = [%i]\n", low, array[low]);
 		return (low);
 	}
-	printf("Value checked array[%li] is out of storage\n", pos);
+	printf("Value checked array[%li] is out of range\n", pos);
 	return (-1);
 }
